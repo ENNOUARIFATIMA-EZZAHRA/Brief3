@@ -103,6 +103,7 @@ class Compte {
     public void afficherCompte() {
         for (Compte compte :  listCompte){
             System.out.println(compte.toString());
+
         }
     }
 }
