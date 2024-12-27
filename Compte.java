@@ -96,6 +96,9 @@ class Compte {
         //3- si le client existe -> affecter le client au compte
         //4- Sinon operation annuler
 
+
+
+
     }
     public void afficherCompte() {
         for (Compte compte :  listCompte){
