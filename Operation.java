@@ -1,50 +1,17 @@
-import java.util.ArrayList;
+package App;
+
+import java.util.Date;
 
 public class Operation {
     private String type;
     private double montant;
-    private String date;
-    private String compteAssocie;
-//constructor
+    private Date date;
+    private Compte compteAssocie;
 
-    public Operation(String type, double montant, String date, String compteAssocie) {
+    public Operation(String type, double montant, Compte compteAssocie) {
         this.type = type;
         this.montant = montant;
-        this.date = date;
-        this.compteAssocie = compteAssocie;
-    }
-
-    //geters and setters
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public double getMontant() {
-        return montant;
-    }
-
-    public void setMontant(double montant) {
-        this.montant = montant;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getCompteAssocie() {
-        return compteAssocie;
-    }
-
-    public void setCompteAssocie(String compteAssocie) {
+        this.date = new Date(); 
         this.compteAssocie = compteAssocie;
     }
 
@@ -53,21 +20,26 @@ public class Operation {
         return "Operation{" +
                 "type='" + type + '\'' +
                 ", montant=" + montant +
-                ", date='" + date + '\'' +
-                ", compteAssocie='" + compteAssocie + '\'' +
+                ", date=" + date +
+                ", compteAssocie=" + compteAssocie.getNumero() +
                 '}';
     }
 
 
+    public String getType() {
+        return type;
+    }
 
+    public double getMontant() {
+        return montant;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public Compte getCompteAssocie() {
+        return compteAssocie;
+    }
 }
-
-
-
-
-
-
-
-
-
 
